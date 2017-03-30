@@ -1,0 +1,73 @@
+/* === GRAB JSON ====== */
+
+$.ajaxSetup({
+	// a must -- otherwise, current_set = null
+	async: false
+});
+
+var fur_set = null, vision_set = null,  beauty_set = null;
+
+$.getJSON("data/fur_res.json", function(json) {
+		fur_set = json;
+});
+
+$.getJSON("data/vision_res.json", function(json) {
+		vision_set = json;
+});
+
+
+$.getJSON("data/beauty_res.json", function(json) {
+		beauty_set = json;
+});
+
+// ___________________________________________________________ ||
+// ___________________________________________________________ ||
+
+/* ===  SWAPPING EVERYWHERE	================== */
+
+var slides_per_row = 4;
+var current_max_slides = Math.ceil(fur_set / slides_per_row);
+var current_section = "fur";
+var current_entry = 1;
+var current_page = 1;
+var current_set = fur_set;
+
+
+
+/* Colors are: lavender, maroon, shamrock green, turquoise  */
+function swapColors(selection){
+	var color_options = ["#CC99CC", "#AA0114", "#009E60", "#009ba2"];
+	$('body').animate({backgroundColor: color_options[selection-1]});
+}
+
+function swapEntry(selection){
+	console.log(current_set.fur[0].filename);
+	var selectedData = current_set[selection*current_page -1];
+	 $('#presentation_img').attr('src',  current_section + "/" + selectedData); 
+	// console.log($('#presentation_img').attr('src'));
+}
+
+
+/* ---	--------- */
+function swapSection(section_name){
+	current_section = section_name;
+	set = null;
+	updateTracker(section);
+}
+
+/*---		--------- */
+function shiftDeck(direction){
+
+	if (direction === 'left'){
+		current_page++;
+	} else {
+		current_page--;
+		
+	}
+	updateTracker();
+}
+
+function updateTracker(set){
+	var page_count = Math.ceil(set.length / slides_per_row);
+	$("tracker").text("HEY");
+}

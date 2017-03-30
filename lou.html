@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+   <head>
+   <meta charset="UTF-8">
+      <title>simply amazing</title>
+      <link href="lou.css" rel="stylesheet" type="text/css"/>
+      <script type = "text/javascript" src = "http://code.jquery.com/jquery-latest.min.js"></script>
+      <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+      <script type = "text/javascript" src = "lou.js"></script>
+   </head>
+  
+  <body>
+		<div id = "banner">
+			<p>lovely lindsey ♥</p>
+		</div>
+	<div id = "main_wrapper">
+		<div id = "lou_block">
+			<img id = "presentation_img" src = "fur/hmm.jpg"/>
+		</div>
+	  <div id = "choice_block">
+	  <ul>
+			<li><a href = "javascript:shiftDeck('left');" id = "left_slider" class = "arrow"> < </a></li>
+			<li><img onclick="swapEntry('1', '#presentation_img')" src = "fur/hmm.jpg"/></li>
+			<li><img onclick="swapEntry('2', '#presentation_img')" src = "fur/bell.jpg"/></li>
+			<li><img onclick="swapEntry('3', '#presentation_img')" src = "fur/srs.jpg"/></li>
+			<li><img onclick="swapEntry('4', '#presentation_img')" src = "fur/pup.jpg"/></li>
+			<li><a href = "javascript:shiftDeck('right');" id = "right_slider" class = "arrow"> > </a> </li>
+		</ul>
+	  </div>
+  
+		
+  </div>
+		<!-- End Main Wrapper -->
+
+		<div id = "panel_wrapper">
+			<div id = "color_wrapper" class = "plain_divider">
+					<ul id = "panel_colors" >
+						<li onclick = "swapColors(1)" style = "background: #C291C2">_</li>
+						<li onclick = "swapColors(2)" style = "background: #AA0114">_</li>
+						<li onclick = "swapColors(3)" style = "background: #009E60">_</li>
+						<li onclick = "swapColors(4)" style = "background: #009ba2">_</li>
+					</ul>
+			</div>
+		
+			<div id = "choices_wrapper">
+			<ul id = "panel_choices">
+				<li><a onclick = "swapSection('fur')" href = "#null">fur</a></li>
+				<li><a onclick = "swapSection('vision')" href = "#null">vision</a></li>
+				<li><a onclick = "swapSection('beauty')" href = "#null">beauty</a></li>
+			</ul>
+			</div>
+			<div id = "tracker" class = "plain_divider"> --- </div>
+			<div id = "blank_space">
+			<p>:)</p>
+			</div>
+		</div>		
+		
+		
+  </body>
+</html>

@@ -1,0 +1,252 @@
+/* === UNIVERSALS ====== */
+
+* {
+  margin: 0px;
+  padding: 0px;
+ }
+
+body{
+	background: #CC99CC;
+	margin:0;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	min-width: 750px;
+}
+
+ul{
+	list-style-type:none;
+}
+
+
+a{
+	text-decoration: none;
+}
+
+/* panel area :not(section choice) */
+.plain_divider{
+	clear: both;
+	background: #6E656E;
+	height: 50px;
+}
+
+/* === UPPER PAGE ====== */
+
+#banner{
+	font-size: 28px;
+	background: linear-gradient(#000, #555);
+	color: white;
+	opacity: 0.9;
+	padding: 5px;
+}
+
+/* Encapsulates Img & Panel */
+#main_wrapper{
+	text-align: center;
+	display: inline-block;
+	width: 85%;
+	float: left;
+	}
+
+
+/*  Image Wrapper  */
+#lou_block{
+	display: inline-block;
+	width: 470px;
+	height: 470px;
+	margin: 0px auto;
+	background: black;
+
+	box-shadow: 10px 3px 250px #000;
+	-moz-box-shadow: 10px 3px 250px #000;
+	-webkit-box-shadow: 10px 3px 250px #000;
+}
+
+/* Actual Image */
+#lou_block img{
+	width: 100%;
+	border: 1px solid black;
+}
+
+/* === SIDE CTRL ====== */
+#panel_wrapper {
+	width: 15%;
+	height: 100%;
+	text-align:center;
+	float: right;
+	background: linear-gradient(#000, #111);
+	opacity: 0.8;
+	 overflow: auto;
+	
+	}
+
+/* section option buttons */
+#panel_choices {
+	opacity: 0.7;
+	background: #D9B4D9;
+}
+
+
+/* the panel divisions */
+#panel_choices li{
+	font-size: 24px;
+	font-family: calibri;
+
+	box-shadow: 1px 1px 2px #333333;
+	-moz-box-shadow: 1px 1px 2px #333333;
+	-webkit-box-shadow: 1px 1px 2px #333333;
+
+}
+
+
+/* padding of section buttons */
+#panel_choices a{
+	width: 100%;
+	padding: 20% 0%;
+	display: inline-block;
+	color: #333333;
+}
+
+/* highlight button */
+#panel_choices a:hover{
+	background: #AC79AC;
+	color: white;
+
+}
+
+	/* ~~~ COLOR BOXES ~~~ */
+
+#color_wrapper{
+
+	box-shadow: 1px 4px 2px #000;
+	-moz-box-shadow: 1px 4px 2px #000;
+	-webkit-box-shadow: 1px 4px 2px #000;
+}
+
+#panel_colors {
+	margin: auto 0;
+}
+
+#panel_colors li{
+	width: 20%;
+	display: inline-block;
+	cursor: pointer;
+	padding-top: 10px;
+	 border-bottom-right-radius: 2em;
+	/* TODO - CENTER */
+
+
+	/* removes text from color choices */
+	color: transparent;
+	opacity: 1.0;
+}
+
+#panel_colors li:hover{
+	/* choice highlight */
+	border: 2px solid black;
+}
+
+#presentation_img{
+	display: none;
+}
+
+
+
+#tracker{
+	font-size: 26px;
+	color: white;
+}
+
+#blank_space{
+	color: white;
+	font-size: 42px;
+	padding-bottom: 100%;
+   margin: 0 auto;
+	display: block;
+	text-align: center;
+
+	}
+
+#blank_space p{
+   bottom: 0;
+   line-height: 150px;
+}
+
+/* === IMG SLIDER ====== */
+
+/* Slider Wrapper */
+#choice_block{
+	display: block;
+	width: 100%;
+
+	text-align:center;
+	background-color: #444444;
+	background-color: rgba(68,68,68, 0.8);
+
+	margin: 0px auto;
+	border-top: 13px dashed black;
+	border-bottom: 13px dashed black;
+
+
+}
+
+/* 'strip' */
+#choice_block ul{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+
+}
+
+	/* ~~~ THUMBNAILS ~~~~~~ */
+#choice_block li{
+	display: inline-block;
+	height: 100px;
+	opacity: 0.3;
+
+}
+
+#choice_block li:hover{
+	 opacity: 1.0;
+
+}
+#choice_block img{
+	width: 100px;
+	height: 100px;
+	margin: 7px 0px;
+	cursor: pointer;
+	padding: 10px;
+}
+
+#choice_block img:hover{
+	box-shadow: 0px 0px 5px #cbcbcb;
+	-moz-box-shadow: 0 0 5px #cbcbcb;
+	-webkit-box-shadow: 0 0 5px #cbcbcb;
+}
+
+/* === ARROWS ====== */
+.arrow{
+	font-size: 48px;
+	background: #908A90;
+	padding: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+.arrow:hover{
+	background:#7A241C;
+	color: white;
+
+
+}
+
+#left_slider{
+	float: left;
+	margin-left: 0;
+}
+
+#right_slider{
+	float:right;
+	margin-right: 0;
+}
