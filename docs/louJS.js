@@ -32,14 +32,10 @@ function swapColors(selection){
 
 function swapEntry(selection, container){
 	var fileIndex = 4*(current_page-1) + (selection-1);
-	console.log("e --- " + (4*(current_page-1) + (selection-1))  );
-	console.log("s --- " + selection);
-	console.log("p --- " + current_page);
-	console.log("INDEX -- " + fileIndex);
 	var selectedData = img_set[current_section][fileIndex].filename;
 	$(container).fadeOut(function() { 
 		$(this).load(function() { $(this).fadeIn(); }); 
-		$(this).attr("src", current_section + "/" + selectedData); 
+		$(this).attr("src", "docs/" + current_section + "/" + selectedData); 
 		heightComputer();
 	}); 
 }
@@ -59,7 +55,6 @@ function swapSection(selection){
 
 /*---	ARROW CLICK	--------- */
 function shiftDeck(direction){
-	console.log("\n");
 	/* flip through pages */
 	if (direction === 'left'){
 		current_page--;
@@ -100,7 +95,6 @@ function	swapPreviews(){
 				maxed = true;
 			} else{
 				selectedData = img_set[current_section][fileIndex].filename;
-				console.log(selectedData );
 			}
 			selection++;
 			
