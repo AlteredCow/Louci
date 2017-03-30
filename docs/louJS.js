@@ -35,7 +35,7 @@ function swapEntry(selection, container){
 	var selectedData = img_set[current_section][fileIndex].filename;
 	$(container).fadeOut(function() { 
 		$(this).load(function() { $(this).fadeIn(); }); 
-		$(this).attr("src", "docs/" + current_section + "/" + selectedData); 
+		$(this).attr("src",  current_section + "/" + selectedData); 
 		heightComputer();
 	}); 
 }
